@@ -1,0 +1,179 @@
+$body-font-family: sans-serif !default;
+$body-font-size: 16px !default;
+$body-font-color: #0a0a0a !default;
+$body-line-height: 24px !default;
+$body-font-size-small: 0.85rem !default;
+$header-font-family: serif !default;
+$h1-size-small: 24px !default;
+$h1-size-medium: 48px !default;
+$h2-size-small: 20px !default;
+$h2-size-medium: 40px !default;
+$h3-size-small: 19px !default;
+$h3-size-medium: 31px !default;
+$h4-size-small: 18px !default;
+$h4-size-medium: 25px !default;
+$h5-size-small: 17px !default;
+$h5-size-medium: 20px !default;
+$h6-size-small: 16px !default;
+$h6-size-medium: $h6-size-small !default;
+$bold-font-weight: 700 !default;
+$code-font-size: 0.9rem !default;
+$code-font-color: #c7254e !default;
+$code-background-color: #f9f2f4 !default;
+$code-padding: 2px 4px !default;
+$code-border-radius: 4px !default;
+$link-font-color: #337ab7 !default;
+$link-font-hover-color: #23527c !default;
+$link-show-underline: false !default;
+$link-show-underline-hover: true !default;
+$font-highlight-background: #fcf8e3 !default;
+$font-highlight-padding: 0.2rem !default;
+$blockquote-margin: 32px 0 !default;
+$blockquote-padding: 8px 16px !default;
+$blockquote-font-size: $body-font-size !default;
+$blockquote-border: 1px solid #DDDDDD !default;
+$blockquote-font-color: #6f6f6f !default;
+$blockquote-cite-font-size: 12px !default;
+$blockquote-cite-font-color: #555555 !default;
+$header-font-breakpoint: 650px !default;
+
+body {
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  color: $body-font-color;
+  font-weight: normal;
+  line-height: $body-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font-family;
+  margin: $body-line-height 0;
+}
+
+h1 {
+  font-size: $h1-size-small;
+  line-height: $body-line-height * 2;
+
+  @media (min-width: $header-font-breakpoint) {
+    font-size: $h1-size-medium;
+  }
+}
+
+h2 {
+  font-size: $h2-size-small;
+  line-height: $body-line-height * 2;
+
+  @media (min-width: $header-font-breakpoint) {
+    font-size: $h2-size-medium;
+  }
+}
+
+h3 {
+  font-size: $h3-size-small;
+  line-height: $body-line-height * 2;
+
+  @media (min-width: $header-font-breakpoint) {
+    font-size: $h3-size-medium;
+  }
+}
+
+h4 {
+  font-size: $h4-size-small;
+
+  @media (min-width: $header-font-breakpoint) {
+    font-size: $h4-size-medium;
+  }
+}
+
+h5 {
+  font-size: $h5-size-small;
+
+  @media (min-width: $header-font-breakpoint) {
+    font-size: $h5-size-medium;
+  }
+}
+
+h6 {
+  font-size: $h6-size-small;
+
+  @media (min-width: $header-font-breakpoint) {
+    font-size: $h6-size-medium;
+  }
+}
+
+p {
+  margin: $body-line-height 0;
+  text-rendering: optimizeLegibility;
+  font-size: inherit;
+}
+
+small {
+  font-size: $body-font-size-small;
+}
+
+b,
+strong {
+  font-weight: $bold-font-weight;
+}
+
+code {
+  padding: $code-padding;
+  font-size: $code-font-size;
+  color: $code-font-color;
+  background-color: $code-background-color;
+  border-radius: $code-border-radius;
+}
+
+a {
+  color: $link-font-color;
+
+  @if $link-show-underline {
+    text-decoration: underline;
+  }
+
+  @else {
+    text-decoration: none;
+  }
+
+  &:active,
+  &:hover {
+    color: $link-font-hover-color;
+    outline: 0;
+
+    @if $link-show-underline-hover {
+      text-decoration: underline;
+    }
+
+    @else {
+      text-decoration: none;
+    }
+  }
+}
+
+mark {
+  background: $font-highlight-background;
+  padding: $font-highlight-padding;
+}
+
+blockquote {
+  margin: $blockquote-margin;
+  font-size: $blockquote-font-size;
+  padding: $blockquote-padding;
+  border-left: $blockquote-border;
+  color: $blockquote-font-color;
+
+  p {
+    color: $blockquote-font-color;
+  }
+
+  cite {
+    display: block;
+    font-size: $blockquote-cite-font-size;
+    color: $blockquote-cite-font-color;
+  }
+}
