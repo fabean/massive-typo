@@ -67,10 +67,16 @@ strong {
 
 code {
   padding: 2px 4px;
+  font-family: monospace;
   font-size: 0.9rem;
-  color: #c7254e;
-  background-color: #f9f2f4;
-  border-radius: 4px; }
+  color: #0a0a0a;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  border: 1px solid #cacaca;
+  max-width: 100%;
+  word-wrap: break-word; }
+  pre code {
+    display: block; }
 
 a {
   color: #337ab7;

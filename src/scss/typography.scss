@@ -3,6 +3,9 @@ $body-font-size: 16px !default;
 $body-font-color: #0a0a0a !default;
 $body-line-height: 24px !default;
 $body-font-size-small: 0.85rem !default;
+$bold-font-weight: 700 !default;
+
+$header-font-breakpoint: 650px !default;
 $header-font-family: serif !default;
 $h1-size-small: 24px !default;
 $h1-size-medium: 48px !default;
@@ -16,18 +19,23 @@ $h5-size-small: 17px !default;
 $h5-size-medium: 20px !default;
 $h6-size-small: 16px !default;
 $h6-size-medium: $h6-size-small !default;
-$bold-font-weight: 700 !default;
+
+$code-font-family: monospace !default;
 $code-font-size: 0.9rem !default;
-$code-font-color: #c7254e !default;
-$code-background-color: #f9f2f4 !default;
+$code-font-color: #0a0a0a !default;
+$code-background-color: #e6e6e6 !default;
 $code-padding: 2px 4px !default;
 $code-border-radius: 4px !default;
+$code-border: 1px solid #cacaca !default;
+
 $link-font-color: #337ab7 !default;
 $link-font-hover-color: #23527c !default;
 $link-show-underline: false !default;
 $link-show-underline-hover: true !default;
+
 $font-highlight-background: #fcf8e3 !default;
 $font-highlight-padding: 0.2rem !default;
+
 $blockquote-margin: 32px 0 !default;
 $blockquote-padding: 8px 16px !default;
 $blockquote-font-size: $body-font-size !default;
@@ -35,7 +43,7 @@ $blockquote-border: 1px solid #DDDDDD !default;
 $blockquote-font-color: #6f6f6f !default;
 $blockquote-cite-font-size: 12px !default;
 $blockquote-cite-font-color: #555555 !default;
-$header-font-breakpoint: 650px !default;
+
 
 body {
   font-family: $body-font-family;
@@ -123,17 +131,27 @@ strong {
 
 code {
   padding: $code-padding;
+  font-family: $code-font-family;
   font-size: $code-font-size;
   color: $code-font-color;
   background-color: $code-background-color;
   border-radius: $code-border-radius;
+  border: $code-border;
+  max-width: 100%;
+  word-wrap: break-word;
+
+  pre & {
+    display: block;
+  }
 }
+
 
 a {
   color: $link-font-color;
 
   @if $link-show-underline {
     text-decoration: underline;
+
   }
 
   @else {
