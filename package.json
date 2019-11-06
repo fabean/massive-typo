@@ -1,6 +1,6 @@
 {
   "name": "massive-typo",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Simple Typography CSS Library for your projects.",
   "watch": {
     "sass": {
