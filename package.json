@@ -22,10 +22,8 @@
     "build": "npm run lint; npm run sass; npm run compress",
     "watch": "npm-watch",
     "lint": "sass-lint './src/scss/*.scss' --verbose",
-    "sass": "node-sass ./src/scss/typography.scss -x ./dist/css/typography.css; npm run autoprefix",
-    "compress": "node-sass ./src/scss/typography.scss -x ./dist/css/typography.min.css --output-style compressed; npm run autoprefix-compressed",
-    "autoprefix": "postcss ./dist/css/typography.css --use autoprefixer -o ./dist/css/typography.css --no-map",
-    "autoprefix-compressed": "postcss ./dist/css/typography.min.css --use autoprefixer -o ./dist/css/typography.min.css --no-map"
+    "sass": "node-sass ./src/scss/typography.scss -x ./dist/css/typography.css",
+    "compress": "node-sass ./src/scss/typography.scss -x ./dist/css/typography.min.css --output-style compressed"
   },
   "repository": {
     "type": "git",
@@ -38,11 +36,8 @@
   },
   "homepage": "https://github.com/fabean/massive-typo#readme",
   "dependencies": {
-    "autoprefixer": "^9.7.1",
-    "node-sass": "^4.13.0",
-    "npm-watch": "^0.6.0",
-    "postcss-cli": "^6.1.3",
-    "run-sequence": "^2.2.1",
+    "node-sass": "^7.0.1",
+    "npm-watch": "^0.11.0",
     "sass-lint": "^1.13.1"
   }
 }
