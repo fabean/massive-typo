@@ -22,8 +22,8 @@
     "build": "npm run lint; npm run sass; npm run compress",
     "watch": "npm-watch",
     "lint": "sass-lint './src/scss/*.scss' --verbose",
-    "sass": "node-sass ./src/scss/typography.scss -x ./dist/css/typography.css",
-    "compress": "node-sass ./src/scss/typography.scss -x ./dist/css/typography.min.css --output-style compressed"
+    "sass": "sass --no-source-map ./src/scss/typography.scss ./dist/css/typography.css",
+    "compress": "sass --no-source-map ./src/scss/typography.scss ./dist/css/typography.min.css --style compressed"
   },
   "repository": {
     "type": "git",
@@ -36,8 +36,8 @@
   },
   "homepage": "https://github.com/fabean/massive-typo#readme",
   "dependencies": {
-    "node-sass": "^7.0.1",
     "npm-watch": "^0.11.0",
+    "sass": "^1.53.0",
     "sass-lint": "^1.13.1"
   }
 }
